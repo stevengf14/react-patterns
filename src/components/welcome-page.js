@@ -8,7 +8,7 @@ export const WelcomePage = () => (
     </Typography>
 
     <Typography variant="h4" component="h2">
-      Esta aplicación is part of the course: 
+      This app is part of the course: 
       Guía definitiva: Aprende los 9 Patrones Avanzados en ReactJS
     </Typography>
   </>
