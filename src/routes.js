@@ -1,6 +1,6 @@
 import { WelcomePage } from "./components/welcome-page";
-import { CustomHookPage } from "./custom-hook/classwork/components/custom-hook-page";
-import { CustomHookPageHomework } from "./custom-hook/homework/components/custom-hook-page";
+import { CustomHookPage } from "./custom-hook/components/classwork/custom-hook-page";
+import { CustomHookPageHomework } from "./custom-hook/components/homework/custom-hook-page";
 import { HocPage } from "./hoc";
 
 export const routes = [
