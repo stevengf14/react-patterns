@@ -1,8 +1,10 @@
 import React from "react";
-import { NormalForm } from "./nornal-form";
+import { NormalForm } from "./normal-form";
+import { MyFormAControlled } from "./form-with-hoc";
 
 export const HocPage = () => {
   const handleNormalSubmit = (data) => alert(data);
+  const handleHocSubmit = (data) => alert(JSON.stringify(data));
   return (
     <>
       <h2>Example without High Order Component (HOC)</h2>
@@ -10,6 +12,7 @@ export const HocPage = () => {
       <hr></hr>
 
       <h2>Example with High Order Component (HOC)</h2>
+      <MyFormAControlled onSubmit={handleHocSubmit} />
     </>
   );
 };
