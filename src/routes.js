@@ -1,7 +1,8 @@
 import { WelcomePage } from "./components/welcome-page";
 import { CustomHookPage } from "./custom-hook/components/classwork/custom-hook-page";
 import { CustomHookPageHomework } from "./custom-hook/components/homework/custom-hook-page";
-import { HocPage } from "./hoc";
+import { HocPage } from "./hoc/components/classwork/hoc-page";
+import { HocPageHomework } from "./hoc/components/homework/hoc-page";
 
 export const routes = [
   {
@@ -24,5 +25,10 @@ export const routes = [
     path: "/hoc",
     label: "HOC",
     Component: HocPage,
+  },
+  {
+    path: "/hoc-homework",
+    label: "HOC Homework",
+    Component: HocPageHomework,
   },
 ];
