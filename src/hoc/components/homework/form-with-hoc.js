@@ -1,24 +1,47 @@
 import { useState } from "react";
+import axios from "axios";
 
 const withControlledForm = (Form, initialState = {}) => {
   const ControlledForm = ({ onSubmit }) => {
-    const [formValues, setFormValues] = useState(initialState);
+    const [username, setUsername] = useState("");
+    const [data, setData] = useState(null);
+    const apiBaseUrl = "https://api.github.com";
+
+    const getData = (url) => {
+      return axios.get(url).catch((error) => {
+        console.log(error);
+        return [];
+      });
+    };
 
     const handleChange = (e) => {
-      const {
-        target: { name, value },
-      } = e;
-      setFormValues({ ...formValues, [name]: value });
+      setUsername(e.target.value);
     };
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      onSubmit(formValues);
+      const doFetch = async () => {
+        const fetchData = async () => {
+          const dataGit = await getData(
+            `${apiBaseUrl}/users/${username}/repos?sort=created`
+          );
+          console.log(dataGit);
+          if (dataGit.status === 200) {
+            setData(dataGit.data);
+          } else {
+            setData([]);
+          }
+        };
+        fetchData();
+      };
+      doFetch();
+      onSubmit(username);
     };
 
     return (
       <Form
-        formValues={formValues}
+        username={username}
+        data={data}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
@@ -28,35 +51,37 @@ const withControlledForm = (Form, initialState = {}) => {
   return ControlledForm;
 };
 
-const MyFormA = ({ formValues, handleChange, handleSubmit }) => {
+const MyFormA = ({ username, data, handleChange, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <p>Name</p>
+        <p>username</p>
         <input
           type="text"
           name="name"
-          value={formValues.name}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <p>Job Title</p>
-        <input
-          type="text"
-          name="jobTitle"
-          value={formValues.jobTitle}
+          value={username}
           onChange={handleChange}
         />
       </div>
       <div>
         <button type="submit">Send</button>
       </div>
+      {data !== null && (
+        <div>
+          {Array.isArray(data) &&
+            data.map(({ name, html_url }) => (
+              <div key={html_url}>
+                <p>
+                  <a href={html_url} target="_blank" rel="noopener noreferrer">
+                    {name}
+                  </a>
+                </p>
+              </div>
+            ))}
+        </div>
+      )}
     </form>
   );
 };
 
-export const MyFormAControlled = withControlledForm(MyFormA, {
-  name: "steven",
-  jobTitle: "Fullstack developer",
-});
+export const MyFormAControlled = withControlledForm(MyFormA, "");

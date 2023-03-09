@@ -13,7 +13,7 @@ export const NormalForm = ({ onSubmit }) => {
 
   const getData = (url) => {
     return axios.get(url).catch((error) => {
-      console.log(error)
+      console.log(error);
       return [];
     });
   };
@@ -26,12 +26,11 @@ export const NormalForm = ({ onSubmit }) => {
           `${apiBaseUrl}/users/${username}/repos?sort=created`
         );
         console.log(data);
-        if(data.status===200){
+        if (data.status === 200) {
           setData(data.data);
-        } else{
-          setData([])
+        } else {
+          setData([]);
         }
-        
       };
       fetchData();
     };
@@ -49,6 +48,9 @@ export const NormalForm = ({ onSubmit }) => {
           onChange={handleChange}
         />
       </div>
+      <div>
+        <button type="submit">Send</button>
+      </div>
       {data !== null && (
         <div>
           {Array.isArray(data) &&
@@ -63,9 +65,6 @@ export const NormalForm = ({ onSubmit }) => {
             ))}
         </div>
       )}
-      <div>
-        <button type="submit">Send</button>
-      </div>
     </form>
   );
 };
