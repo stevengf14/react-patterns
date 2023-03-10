@@ -3,6 +3,7 @@ import { CustomHookPage } from "./custom-hook/components/classwork/custom-hook-p
 import { CustomHookPageHomework } from "./custom-hook/components/homework/custom-hook-page";
 import { HocPage } from "./hoc/components/classwork/hoc-page";
 import { HocPageHomework } from "./hoc/components/homework/hoc-page";
+import { ExtensibleStylesPage } from "./extensible-styles/components/extensible-styles-page";
 
 export const routes = [
   {
@@ -30,5 +31,10 @@ export const routes = [
     path: "/hoc-homework",
     label: "HOC Homework",
     Component: HocPageHomework,
+  },
+  {
+    path: "/extensible-styles",
+    label: "Extensible Styles",
+    Component: ExtensibleStylesPage,
   },
 ];
