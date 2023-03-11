@@ -3,7 +3,8 @@ import { CustomHookPage } from "./custom-hook/components/classwork/custom-hook-p
 import { CustomHookPageHomework } from "./custom-hook/components/homework/custom-hook-page";
 import { HocPage } from "./hoc/components/classwork/hoc-page";
 import { HocPageHomework } from "./hoc/components/homework/hoc-page";
-import { ExtensibleStylesPage } from "./extensible-styles/components/extensible-styles-page";
+import { ExtensibleStylesPage } from "./extensible-styles/components/classwork/extensible-styles-page";
+import { ExtensibleStylesPageHomework } from "./extensible-styles/components/homework/extensible-styles-page";
 
 export const routes = [
   {
@@ -36,5 +37,10 @@ export const routes = [
     path: "/extensible-styles",
     label: "Extensible Styles",
     Component: ExtensibleStylesPage,
+  },
+  {
+    path: "/extensible-styles-homework",
+    label: "Extensible Styles Homework",
+    Component: ExtensibleStylesPageHomework,
   },
 ];

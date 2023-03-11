@@ -1,0 +1,40 @@
+.div {
+  margin: 25px;
+  padding: 50px;
+  background-color: #42a5f5;
+  color: #ffffff;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 50px;
+  background-color: aquamarine;
+  color: #28a745
+}
+
+.btn {
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.btn-primary,
+.btn-success,
+.btn-danger {
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #42a5f5;
+  border: #bbdefb;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: #28a745;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
