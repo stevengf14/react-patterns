@@ -5,6 +5,7 @@ import { HocPage } from "./hoc/components/classwork/hoc-page";
 import { HocPageHomework } from "./hoc/components/homework/hoc-page";
 import { ExtensibleStylesPage } from "./extensible-styles/components/classwork/extensible-styles-page";
 import { ExtensibleStylesPageHomework } from "./extensible-styles/components/homework/extensible-styles-page";
+import { CompoundComponentPage } from "./compound-component/components/compound-component-page"
 
 export const routes = [
   {
@@ -42,5 +43,10 @@ export const routes = [
     path: "/extensible-styles-homework",
     label: "Extensible Styles Homework",
     Component: ExtensibleStylesPageHomework,
+  },
+  {
+    path: "/compound-components",
+    label: "Compound Components",
+    Component: CompoundComponentPage,
   },
 ];
