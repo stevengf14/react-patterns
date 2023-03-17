@@ -1,11 +1,11 @@
 import { WelcomePage } from "./components/welcome-page";
-import { CustomHookPage } from "./custom-hook/components/classwork/custom-hook-page";
-import { CustomHookPageHomework } from "./custom-hook/components/homework/custom-hook-page";
-import { HocPage } from "./hoc/components/classwork/hoc-page";
-import { HocPageHomework } from "./hoc/components/homework/hoc-page";
-import { ExtensibleStylesPage } from "./extensible-styles/components/classwork/extensible-styles-page";
-import { ExtensibleStylesPageHomework } from "./extensible-styles/components/homework/extensible-styles-page";
-import { CompoundComponentPage } from "./compound-component/components/compound-component-page"
+import { CustomHookPage } from "./custom-hook/classwork/custom-hook-page";
+import { CustomHookPageHomework } from "./custom-hook/homework/custom-hook-page";
+import { HocPage } from "./hoc/classwork/hoc-page";
+import { HocPageHomework } from "./hoc/homework/hoc-page";
+import { ExtensibleStylesPage } from "./extensible-styles/classwork/extensible-styles-page";
+import { ExtensibleStylesPageHomework } from "./extensible-styles/homework/extensible-styles-page";
+import { CompoundComponentPage } from "./compound-component/compound-component-page"
 
 export const routes = [
   {
