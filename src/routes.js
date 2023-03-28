@@ -7,7 +7,8 @@ import { ExtensibleStylesPage } from "./extensible-styles/classwork/extensible-s
 import { ExtensibleStylesPageHomework } from "./extensible-styles/homework/extensible-styles-page";
 import { CompoundComponentPage } from "./compound-component/classwork/compound-component-page";
 import { CompoundComponentPageHomework } from "./compound-component/homework/compound-component-page";
-import { RenderPropsPage } from "./render-props/components/render-props-page";
+import { RenderPropsPage } from "./render-props/classwork/render-props-page";
+import { RenderPropsPageHomework } from "./render-props/homework/render-props-page";
 
 export const routes = [
   {
@@ -60,5 +61,10 @@ export const routes = [
     path: "/render-props",
     label: "Render Props",
     Component: RenderPropsPage,
+  },
+  {
+    path: "/render-props-homework",
+    label: "Render Props Homework",
+    Component: RenderPropsPageHomework,
   },
 ];
