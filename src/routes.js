@@ -9,7 +9,8 @@ import { CompoundComponentPage } from "./compound-component/classwork/compound-c
 import { CompoundComponentPageHomework } from "./compound-component/homework/compound-component-page";
 import { RenderPropsPage } from "./render-props/classwork/render-props-page";
 import { RenderPropsPageHomework } from "./render-props/homework/render-props-page";
-import { ControlPropsPage } from "./control-props/components/control-props-page";
+import { ControlPropsPage } from "./control-props/classwork/control-props-page";
+import { ControlPropsPageHomework } from "./control-props/homework/control-props-page";
 
 export const routes = [
   {
@@ -72,5 +73,10 @@ export const routes = [
     path: "/control-props",
     label: "Control Props",
     Component: ControlPropsPage,
+  },
+  {
+    path: "/control-props-homework",
+    label: "Control Props Homework",
+    Component: ControlPropsPageHomework,
   },
 ];
