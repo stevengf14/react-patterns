@@ -1,4 +1,5 @@
 import { FinalFormWithRenderProps } from "./final-form-with-render-props";
+import { FormWithHoc } from "./form-with-hoc";
 import { FormWithRenderProps } from "./form-with-render-props";
 
 export const PropsGetterPage = () => {
@@ -74,6 +75,9 @@ export const PropsGetterPage = () => {
           </form>
         )}
       </FinalFormWithRenderProps>
+      <hr></hr>
+      <h2>Example with Props Getter and HOC</h2>
+      <FormWithHoc onSubmit={onSubmit} />
     </>
   );
 };
