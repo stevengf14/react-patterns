@@ -12,6 +12,7 @@ import { RenderPropsPageHomework } from "./render-props/homework/render-props-pa
 import { ControlPropsPage } from "./control-props/classwork/control-props-page";
 import { ControlPropsPageHomework } from "./control-props/homework/control-props-page";
 import { PropsGetterPage } from "./props-getters/components/props-getters-page";
+import { StateInitializerPage } from "./state-initializer/components/state-initializer-page";
 
 export const routes = [
   {
@@ -84,5 +85,10 @@ export const routes = [
     path: "/props-getter",
     label: "Props Getter",
     Component: PropsGetterPage,
+  },
+  {
+    path: "/state-initializer",
+    label: "State Initializer",
+    Component: StateInitializerPage,
   },
 ];
